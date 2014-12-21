@@ -3,11 +3,15 @@ import os
 import re
 import subprocess
 
-from invoke import task
+from invoke import (
+    run,
+    task,
+)
 
 PACKAGE_NAME = 'protobuf-soa'
 VERSION_FILE = 'VERSION.md'
 
+# TODO: Bump the python version as well
 VERSION_RE = re.compile(r'^\d+\.\d+\.\d+$')
 CURRENT_VERSION_RE = re.compile(r'VERSION\s*=\s*(.*?)$')
 VERSION_RE_TEMPLATE = "VERSION = %s"
@@ -121,3 +125,27 @@ def release():
         _commit_release_changes(release_version)
         _create_release_tag(release_version)
         _push_release_changes(release_version)
+
+
+@task
+def compile():
+    with base_directory():
+        run(
+            "find . -type f -name '*.proto'"
+            " | xargs protoc --proto_path . --python_out service_protobufs"
+        )
+
+
+@task
+def test(failfast=False):
+    NOSE_ARGS = [
+        '--with-coverage',
+        '--cover-erase',
+        '--cover-package=service_protobufs',
+    ]
+    with base_directory():
+        if failfast:
+            NOSE_ARGS.append('-x')
+        command = 'python setup.py nosetests %s' % (' '.join(NOSE_ARGS),)
+        print command
+        run(command, pty=True)
