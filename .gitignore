@@ -1,1 +1,3 @@
+__init__.py
+soa_pb2.py
 *.py[co]
