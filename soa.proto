@@ -6,8 +6,8 @@ message Control {
 }
 
 message Paginator {
-    optional string next_page = 1;
-    optional string previous_page = 2;
+    optional uint32 next_page = 1;
+    optional uint32 previous_page = 2;
     optional uint32 count = 3;
     optional uint32 page_size = 4;
     optional uint32 page = 5 [default = 1];
