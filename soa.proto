@@ -10,7 +10,7 @@ message Paginator {
     optional string previous_page = 2;
     optional uint32 count = 3;
     optional uint32 page_size = 4;
-    optional uint32 page = 5;
+    optional uint32 page = 5 [default = 1];
     optional uint32 total_pages = 6;
 }
 
