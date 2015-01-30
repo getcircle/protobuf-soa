@@ -8,9 +8,9 @@ message Control {
 message Paginator {
     optional string next_page = 1;
     optional string previous_page = 2;
-    optional string count = 3;
-    optional string page_size = 4;
-    optional string page = 5;
+    optional uint32 count = 3;
+    optional uint32 page_size = 4;
+    optional uint32 page = 5;
 }
 
 message ActionControl {
