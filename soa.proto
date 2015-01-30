@@ -2,16 +2,25 @@ package soa;
 
 message Control {
     optional string token = 1;
-    required string service = 2;
+    optional string service = 2;
+}
+
+message Paginator {
+    optional string next_page = 1;
+    optional string previous_page = 2;
+    optional string count = 3;
+    optional string page_size = 4;
+    optional string page_number = 5;
 }
 
 message ActionControl {
-    required string service = 1;
-    required string action = 2;
+    optional string service = 1;
+    optional string action = 2;
+    optional Paginator paginator = 3;
 }
 
 message ActionRequest {
-    required ActionControl control = 1;
+    optional ActionControl control = 1;
     optional ActionRequestParams params = 2;
 }
 
@@ -37,16 +46,16 @@ message ActionResponseResult {
 }
 
 message ActionResponse {
-    required ActionControl control = 1;
+    optional ActionControl control = 1;
     optional ActionResponseResult result = 2;
 }
 
 message ServiceRequest {
-    required Control control = 1;
+    optional Control control = 1;
     repeated ActionRequest actions = 2;
 }
 
 message ServiceResponse {
-    required Control control = 1;
+    optional Control control = 1;
     repeated ActionResponse actions = 2;
 }
