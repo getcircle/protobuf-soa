@@ -11,6 +11,7 @@ message Paginator {
     optional uint32 count = 3;
     optional uint32 page_size = 4;
     optional uint32 page = 5;
+    optional uint32 total_pages = 6;
 }
 
 message ActionControl {
