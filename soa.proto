@@ -10,7 +10,7 @@ message Paginator {
     optional string previous_page = 2;
     optional string count = 3;
     optional string page_size = 4;
-    optional string page_number = 5;
+    optional string page = 5;
 }
 
 message ActionControl {
