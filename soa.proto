@@ -1,13 +1,13 @@
 package soa;
 
 message ControlV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional string token = 2;
     optional string service = 3;
 }
 
 message PaginatorV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional uint32 next_page = 2;
     optional uint32 previous_page = 3;
     optional uint32 count = 4;
@@ -17,33 +17,33 @@ message PaginatorV1 {
 }
 
 message ActionControlV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional string service = 2;
     optional string action = 3;
     optional PaginatorV1 paginator = 4;
 }
 
 message ActionRequestV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional ActionControlV1 control = 2;
     optional ActionRequestParamsV1 params = 3;
 }
 
 message ActionRequestParamsV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
 
     // give us room to extend the ActionRequestParams message
     extensions 100 to max;
 }
 
 message ActionResultV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional bool success = 2;
     repeated string errors = 3;
     repeated ErrorDetailV1 error_details = 4;
 
     message ErrorDetailV1 {
-        optional uint32 version = 1;
+        optional uint32 version = 1 [default = 1];
         optional string error = 2;
         optional string key = 3;
         optional string detail = 4;
@@ -54,19 +54,19 @@ message ActionResultV1 {
 }
 
 message ActionResponseV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional ActionControlV1 control = 2;
     optional ActionResultV1 result = 3;
 }
 
 message ServiceRequestV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional ControlV1 control = 2;
     repeated ActionRequestV1 actions = 3;
 }
 
 message ServiceResponseV1 {
-    optional uint32 version = 1;
+    optional uint32 version = 1 [default = 1];
     optional ControlV1 control = 2;
     repeated ActionResponseV1 actions = 3;
 }
