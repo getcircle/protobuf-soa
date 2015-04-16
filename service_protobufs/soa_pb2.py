@@ -18,242 +18,36 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='soa.proto',
   package='soa',
-  serialized_pb=_b('\n\tsoa.proto\x12\x03soa\")\n\x07\x43ontrol\x12\r\n\x05token\x18\x01 \x01(\t\x12\x0f\n\x07service\x18\x02 \x01(\t\"}\n\tPaginator\x12\x11\n\tnext_page\x18\x01 \x01(\r\x12\x15\n\rprevious_page\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\x12\x11\n\tpage_size\x18\x04 \x01(\r\x12\x0f\n\x04page\x18\x05 \x01(\r:\x01\x31\x12\x13\n\x0btotal_pages\x18\x06 \x01(\r\"S\n\rActionControl\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x02 \x01(\t\x12!\n\tpaginator\x18\x03 \x01(\x0b\x32\x0e.soa.Paginator\"^\n\rActionRequest\x12#\n\x07\x63ontrol\x18\x01 \x01(\x0b\x32\x12.soa.ActionControl\x12(\n\x06params\x18\x02 \x01(\x0b\x32\x18.soa.ActionRequestParams\"\x1f\n\x13\x41\x63tionRequestParams*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"\xba\x01\n\x14\x41\x63tionResponseResult\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0e\n\x06\x65rrors\x18\x02 \x03(\t\x12<\n\rerror_details\x18\x03 \x03(\x0b\x32%.soa.ActionResponseResult.ErrorDetail\x1a\x39\n\x0b\x45rrorDetail\x12\r\n\x05\x65rror\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x12\x0e\n\x06\x64\x65tail\x18\x03 \x01(\t*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"`\n\x0e\x41\x63tionResponse\x12#\n\x07\x63ontrol\x18\x01 \x01(\x0b\x32\x12.soa.ActionControl\x12)\n\x06result\x18\x02 \x01(\x0b\x32\x19.soa.ActionResponseResult\"T\n\x0eServiceRequest\x12\x1d\n\x07\x63ontrol\x18\x01 \x01(\x0b\x32\x0c.soa.Control\x12#\n\x07\x61\x63tions\x18\x02 \x03(\x0b\x32\x12.soa.ActionRequest\"V\n\x0fServiceResponse\x12\x1d\n\x07\x63ontrol\x18\x01 \x01(\x0b\x32\x0c.soa.Control\x12$\n\x07\x61\x63tions\x18\x02 \x03(\x0b\x32\x13.soa.ActionResponse')
+  serialized_pb=_b('\n\tsoa.proto\x12\x03soa\"<\n\tControlV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\r\n\x05token\x18\x02 \x01(\t\x12\x0f\n\x07service\x18\x03 \x01(\t\"\x90\x01\n\x0bPaginatorV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x11\n\tnext_page\x18\x02 \x01(\r\x12\x15\n\rprevious_page\x18\x03 \x01(\r\x12\r\n\x05\x63ount\x18\x04 \x01(\r\x12\x11\n\tpage_size\x18\x05 \x01(\r\x12\x0f\n\x04page\x18\x06 \x01(\r:\x01\x31\x12\x13\n\x0btotal_pages\x18\x07 \x01(\r\"h\n\x0f\x41\x63tionControlV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\t\x12#\n\tpaginator\x18\x04 \x01(\x0b\x32\x10.soa.PaginatorV1\"u\n\x0f\x41\x63tionRequestV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12%\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x14.soa.ActionControlV1\x12*\n\x06params\x18\x03 \x01(\x0b\x32\x1a.soa.ActionRequestParamsV1\"2\n\x15\x41\x63tionRequestParamsV1\x12\x0f\n\x07version\x18\x01 \x01(\r*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"\xd4\x01\n\x0e\x41\x63tionResultV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x0f\n\x07success\x18\x02 \x01(\x08\x12\x0e\n\x06\x65rrors\x18\x03 \x03(\t\x12\x38\n\rerror_details\x18\x04 \x03(\x0b\x32!.soa.ActionResultV1.ErrorDetailV1\x1aL\n\rErrorDetailV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\r\n\x05\x65rror\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\x12\x0e\n\x06\x64\x65tail\x18\x04 \x01(\t*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"o\n\x10\x41\x63tionResponseV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12%\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x14.soa.ActionControlV1\x12#\n\x06result\x18\x03 \x01(\x0b\x32\x13.soa.ActionResultV1\"k\n\x10ServiceRequestV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x1f\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x0e.soa.ControlV1\x12%\n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x14.soa.ActionRequestV1\"m\n\x11ServiceResponseV1\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x1f\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x0e.soa.ControlV1\x12&\n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x15.soa.ActionResponseV1')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
 
-_CONTROL = _descriptor.Descriptor(
-  name='Control',
-  full_name='soa.Control',
+_CONTROLV1 = _descriptor.Descriptor(
+  name='ControlV1',
+  full_name='soa.ControlV1',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='token', full_name='soa.Control.token', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='service', full_name='soa.Control.service', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=18,
-  serialized_end=59,
-)
-
-
-_PAGINATOR = _descriptor.Descriptor(
-  name='Paginator',
-  full_name='soa.Paginator',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='next_page', full_name='soa.Paginator.next_page', index=0,
+      name='version', full_name='soa.ControlV1.version', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='previous_page', full_name='soa.Paginator.previous_page', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='soa.Paginator.count', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='page_size', full_name='soa.Paginator.page_size', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='page', full_name='soa.Paginator.page', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=True, default_value=1,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='total_pages', full_name='soa.Paginator.total_pages', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=61,
-  serialized_end=186,
-)
-
-
-_ACTIONCONTROL = _descriptor.Descriptor(
-  name='ActionControl',
-  full_name='soa.ActionControl',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='service', full_name='soa.ActionControl.service', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='action', full_name='soa.ActionControl.action', index=1,
+      name='token', full_name='soa.ControlV1.token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='paginator', full_name='soa.ActionControl.paginator', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=188,
-  serialized_end=271,
-)
-
-
-_ACTIONREQUEST = _descriptor.Descriptor(
-  name='ActionRequest',
-  full_name='soa.ActionRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='control', full_name='soa.ActionRequest.control', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='params', full_name='soa.ActionRequest.params', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=273,
-  serialized_end=367,
-)
-
-
-_ACTIONREQUESTPARAMS = _descriptor.Descriptor(
-  name='ActionRequestParams',
-  full_name='soa.ActionRequestParams',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=True,
-  extension_ranges=[(100, 536870912), ],
-  oneofs=[
-  ],
-  serialized_start=369,
-  serialized_end=400,
-)
-
-
-_ACTIONRESPONSERESULT_ERRORDETAIL = _descriptor.Descriptor(
-  name='ErrorDetail',
-  full_name='soa.ActionResponseResult.ErrorDetail',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='error', full_name='soa.ActionResponseResult.ErrorDetail.error', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='key', full_name='soa.ActionResponseResult.ErrorDetail.key', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='detail', full_name='soa.ActionResponseResult.ErrorDetail.detail', index=2,
+      name='service', full_name='soa.ControlV1.service', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -270,33 +64,376 @@ _ACTIONRESPONSERESULT_ERRORDETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=522,
-  serialized_end=579,
+  serialized_start=18,
+  serialized_end=78,
 )
 
-_ACTIONRESPONSERESULT = _descriptor.Descriptor(
-  name='ActionResponseResult',
-  full_name='soa.ActionResponseResult',
+
+_PAGINATORV1 = _descriptor.Descriptor(
+  name='PaginatorV1',
+  full_name='soa.PaginatorV1',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='soa.ActionResponseResult.success', index=0,
-      number=1, type=8, cpp_type=7, label=1,
+      name='version', full_name='soa.PaginatorV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='next_page', full_name='soa.PaginatorV1.next_page', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='previous_page', full_name='soa.PaginatorV1.previous_page', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='soa.PaginatorV1.count', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='page_size', full_name='soa.PaginatorV1.page_size', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='page', full_name='soa.PaginatorV1.page', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=True, default_value=1,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='total_pages', full_name='soa.PaginatorV1.total_pages', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=81,
+  serialized_end=225,
+)
+
+
+_ACTIONCONTROLV1 = _descriptor.Descriptor(
+  name='ActionControlV1',
+  full_name='soa.ActionControlV1',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='soa.ActionControlV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='service', full_name='soa.ActionControlV1.service', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='soa.ActionControlV1.action', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='paginator', full_name='soa.ActionControlV1.paginator', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=227,
+  serialized_end=331,
+)
+
+
+_ACTIONREQUESTV1 = _descriptor.Descriptor(
+  name='ActionRequestV1',
+  full_name='soa.ActionRequestV1',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='soa.ActionRequestV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='control', full_name='soa.ActionRequestV1.control', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='params', full_name='soa.ActionRequestV1.params', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=333,
+  serialized_end=450,
+)
+
+
+_ACTIONREQUESTPARAMSV1 = _descriptor.Descriptor(
+  name='ActionRequestParamsV1',
+  full_name='soa.ActionRequestParamsV1',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='soa.ActionRequestParamsV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=True,
+  extension_ranges=[(100, 536870912), ],
+  oneofs=[
+  ],
+  serialized_start=452,
+  serialized_end=502,
+)
+
+
+_ACTIONRESULTV1_ERRORDETAILV1 = _descriptor.Descriptor(
+  name='ErrorDetailV1',
+  full_name='soa.ActionResultV1.ErrorDetailV1',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='soa.ActionResultV1.ErrorDetailV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='error', full_name='soa.ActionResultV1.ErrorDetailV1.error', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='key', full_name='soa.ActionResultV1.ErrorDetailV1.key', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='detail', full_name='soa.ActionResultV1.ErrorDetailV1.detail', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=631,
+  serialized_end=707,
+)
+
+_ACTIONRESULTV1 = _descriptor.Descriptor(
+  name='ActionResultV1',
+  full_name='soa.ActionResultV1',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='soa.ActionResultV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='soa.ActionResultV1.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='errors', full_name='soa.ActionResponseResult.errors', index=1,
-      number=2, type=9, cpp_type=9, label=3,
+      name='errors', full_name='soa.ActionResultV1.errors', index=2,
+      number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='error_details', full_name='soa.ActionResponseResult.error_details', index=2,
+      name='error_details', full_name='soa.ActionResultV1.error_details', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_ACTIONRESULTV1_ERRORDETAILV1, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=True,
+  extension_ranges=[(100, 536870912), ],
+  oneofs=[
+  ],
+  serialized_start=505,
+  serialized_end=717,
+)
+
+
+_ACTIONRESPONSEV1 = _descriptor.Descriptor(
+  name='ActionResponseV1',
+  full_name='soa.ActionResponseV1',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='soa.ActionResponseV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='control', full_name='soa.ActionResponseV1.control', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='result', full_name='soa.ActionResponseV1.result', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=719,
+  serialized_end=830,
+)
+
+
+_SERVICEREQUESTV1 = _descriptor.Descriptor(
+  name='ServiceRequestV1',
+  full_name='soa.ServiceRequestV1',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='soa.ServiceRequestV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='control', full_name='soa.ServiceRequestV1.control', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='actions', full_name='soa.ServiceRequestV1.actions', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -305,73 +442,43 @@ _ACTIONRESPONSERESULT = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_ACTIONRESPONSERESULT_ERRORDETAIL, ],
+  nested_types=[],
   enum_types=[
   ],
   options=None,
-  is_extendable=True,
-  extension_ranges=[(100, 536870912), ],
+  is_extendable=False,
+  extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=403,
-  serialized_end=589,
+  serialized_start=832,
+  serialized_end=939,
 )
 
 
-_ACTIONRESPONSE = _descriptor.Descriptor(
-  name='ActionResponse',
-  full_name='soa.ActionResponse',
+_SERVICERESPONSEV1 = _descriptor.Descriptor(
+  name='ServiceResponseV1',
+  full_name='soa.ServiceResponseV1',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='control', full_name='soa.ActionResponse.control', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='version', full_name='soa.ServiceResponseV1.version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='result', full_name='soa.ActionResponse.result', index=1,
+      name='control', full_name='soa.ServiceResponseV1.control', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=591,
-  serialized_end=687,
-)
-
-
-_SERVICEREQUEST = _descriptor.Descriptor(
-  name='ServiceRequest',
-  full_name='soa.ServiceRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
     _descriptor.FieldDescriptor(
-      name='control', full_name='soa.ServiceRequest.control', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='actions', full_name='soa.ServiceRequest.actions', index=1,
-      number=2, type=11, cpp_type=10, label=3,
+      name='actions', full_name='soa.ServiceResponseV1.actions', index=2,
+      number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -387,138 +494,101 @@ _SERVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=689,
-  serialized_end=773,
+  serialized_start=941,
+  serialized_end=1050,
 )
 
+_ACTIONCONTROLV1.fields_by_name['paginator'].message_type = _PAGINATORV1
+_ACTIONREQUESTV1.fields_by_name['control'].message_type = _ACTIONCONTROLV1
+_ACTIONREQUESTV1.fields_by_name['params'].message_type = _ACTIONREQUESTPARAMSV1
+_ACTIONRESULTV1_ERRORDETAILV1.containing_type = _ACTIONRESULTV1
+_ACTIONRESULTV1.fields_by_name['error_details'].message_type = _ACTIONRESULTV1_ERRORDETAILV1
+_ACTIONRESPONSEV1.fields_by_name['control'].message_type = _ACTIONCONTROLV1
+_ACTIONRESPONSEV1.fields_by_name['result'].message_type = _ACTIONRESULTV1
+_SERVICEREQUESTV1.fields_by_name['control'].message_type = _CONTROLV1
+_SERVICEREQUESTV1.fields_by_name['actions'].message_type = _ACTIONREQUESTV1
+_SERVICERESPONSEV1.fields_by_name['control'].message_type = _CONTROLV1
+_SERVICERESPONSEV1.fields_by_name['actions'].message_type = _ACTIONRESPONSEV1
+DESCRIPTOR.message_types_by_name['ControlV1'] = _CONTROLV1
+DESCRIPTOR.message_types_by_name['PaginatorV1'] = _PAGINATORV1
+DESCRIPTOR.message_types_by_name['ActionControlV1'] = _ACTIONCONTROLV1
+DESCRIPTOR.message_types_by_name['ActionRequestV1'] = _ACTIONREQUESTV1
+DESCRIPTOR.message_types_by_name['ActionRequestParamsV1'] = _ACTIONREQUESTPARAMSV1
+DESCRIPTOR.message_types_by_name['ActionResultV1'] = _ACTIONRESULTV1
+DESCRIPTOR.message_types_by_name['ActionResponseV1'] = _ACTIONRESPONSEV1
+DESCRIPTOR.message_types_by_name['ServiceRequestV1'] = _SERVICEREQUESTV1
+DESCRIPTOR.message_types_by_name['ServiceResponseV1'] = _SERVICERESPONSEV1
 
-_SERVICERESPONSE = _descriptor.Descriptor(
-  name='ServiceResponse',
-  full_name='soa.ServiceResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='control', full_name='soa.ServiceResponse.control', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='actions', full_name='soa.ServiceResponse.actions', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=775,
-  serialized_end=861,
-)
-
-_ACTIONCONTROL.fields_by_name['paginator'].message_type = _PAGINATOR
-_ACTIONREQUEST.fields_by_name['control'].message_type = _ACTIONCONTROL
-_ACTIONREQUEST.fields_by_name['params'].message_type = _ACTIONREQUESTPARAMS
-_ACTIONRESPONSERESULT_ERRORDETAIL.containing_type = _ACTIONRESPONSERESULT
-_ACTIONRESPONSERESULT.fields_by_name['error_details'].message_type = _ACTIONRESPONSERESULT_ERRORDETAIL
-_ACTIONRESPONSE.fields_by_name['control'].message_type = _ACTIONCONTROL
-_ACTIONRESPONSE.fields_by_name['result'].message_type = _ACTIONRESPONSERESULT
-_SERVICEREQUEST.fields_by_name['control'].message_type = _CONTROL
-_SERVICEREQUEST.fields_by_name['actions'].message_type = _ACTIONREQUEST
-_SERVICERESPONSE.fields_by_name['control'].message_type = _CONTROL
-_SERVICERESPONSE.fields_by_name['actions'].message_type = _ACTIONRESPONSE
-DESCRIPTOR.message_types_by_name['Control'] = _CONTROL
-DESCRIPTOR.message_types_by_name['Paginator'] = _PAGINATOR
-DESCRIPTOR.message_types_by_name['ActionControl'] = _ACTIONCONTROL
-DESCRIPTOR.message_types_by_name['ActionRequest'] = _ACTIONREQUEST
-DESCRIPTOR.message_types_by_name['ActionRequestParams'] = _ACTIONREQUESTPARAMS
-DESCRIPTOR.message_types_by_name['ActionResponseResult'] = _ACTIONRESPONSERESULT
-DESCRIPTOR.message_types_by_name['ActionResponse'] = _ACTIONRESPONSE
-DESCRIPTOR.message_types_by_name['ServiceRequest'] = _SERVICEREQUEST
-DESCRIPTOR.message_types_by_name['ServiceResponse'] = _SERVICERESPONSE
-
-Control = _reflection.GeneratedProtocolMessageType('Control', (_message.Message,), dict(
-  DESCRIPTOR = _CONTROL,
+ControlV1 = _reflection.GeneratedProtocolMessageType('ControlV1', (_message.Message,), dict(
+  DESCRIPTOR = _CONTROLV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.Control)
+  # @@protoc_insertion_point(class_scope:soa.ControlV1)
   ))
-_sym_db.RegisterMessage(Control)
+_sym_db.RegisterMessage(ControlV1)
 
-Paginator = _reflection.GeneratedProtocolMessageType('Paginator', (_message.Message,), dict(
-  DESCRIPTOR = _PAGINATOR,
+PaginatorV1 = _reflection.GeneratedProtocolMessageType('PaginatorV1', (_message.Message,), dict(
+  DESCRIPTOR = _PAGINATORV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.Paginator)
+  # @@protoc_insertion_point(class_scope:soa.PaginatorV1)
   ))
-_sym_db.RegisterMessage(Paginator)
+_sym_db.RegisterMessage(PaginatorV1)
 
-ActionControl = _reflection.GeneratedProtocolMessageType('ActionControl', (_message.Message,), dict(
-  DESCRIPTOR = _ACTIONCONTROL,
+ActionControlV1 = _reflection.GeneratedProtocolMessageType('ActionControlV1', (_message.Message,), dict(
+  DESCRIPTOR = _ACTIONCONTROLV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.ActionControl)
+  # @@protoc_insertion_point(class_scope:soa.ActionControlV1)
   ))
-_sym_db.RegisterMessage(ActionControl)
+_sym_db.RegisterMessage(ActionControlV1)
 
-ActionRequest = _reflection.GeneratedProtocolMessageType('ActionRequest', (_message.Message,), dict(
-  DESCRIPTOR = _ACTIONREQUEST,
+ActionRequestV1 = _reflection.GeneratedProtocolMessageType('ActionRequestV1', (_message.Message,), dict(
+  DESCRIPTOR = _ACTIONREQUESTV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.ActionRequest)
+  # @@protoc_insertion_point(class_scope:soa.ActionRequestV1)
   ))
-_sym_db.RegisterMessage(ActionRequest)
+_sym_db.RegisterMessage(ActionRequestV1)
 
-ActionRequestParams = _reflection.GeneratedProtocolMessageType('ActionRequestParams', (_message.Message,), dict(
-  DESCRIPTOR = _ACTIONREQUESTPARAMS,
+ActionRequestParamsV1 = _reflection.GeneratedProtocolMessageType('ActionRequestParamsV1', (_message.Message,), dict(
+  DESCRIPTOR = _ACTIONREQUESTPARAMSV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.ActionRequestParams)
+  # @@protoc_insertion_point(class_scope:soa.ActionRequestParamsV1)
   ))
-_sym_db.RegisterMessage(ActionRequestParams)
+_sym_db.RegisterMessage(ActionRequestParamsV1)
 
-ActionResponseResult = _reflection.GeneratedProtocolMessageType('ActionResponseResult', (_message.Message,), dict(
+ActionResultV1 = _reflection.GeneratedProtocolMessageType('ActionResultV1', (_message.Message,), dict(
 
-  ErrorDetail = _reflection.GeneratedProtocolMessageType('ErrorDetail', (_message.Message,), dict(
-    DESCRIPTOR = _ACTIONRESPONSERESULT_ERRORDETAIL,
+  ErrorDetailV1 = _reflection.GeneratedProtocolMessageType('ErrorDetailV1', (_message.Message,), dict(
+    DESCRIPTOR = _ACTIONRESULTV1_ERRORDETAILV1,
     __module__ = 'soa_pb2'
-    # @@protoc_insertion_point(class_scope:soa.ActionResponseResult.ErrorDetail)
+    # @@protoc_insertion_point(class_scope:soa.ActionResultV1.ErrorDetailV1)
     ))
   ,
-  DESCRIPTOR = _ACTIONRESPONSERESULT,
+  DESCRIPTOR = _ACTIONRESULTV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.ActionResponseResult)
+  # @@protoc_insertion_point(class_scope:soa.ActionResultV1)
   ))
-_sym_db.RegisterMessage(ActionResponseResult)
-_sym_db.RegisterMessage(ActionResponseResult.ErrorDetail)
+_sym_db.RegisterMessage(ActionResultV1)
+_sym_db.RegisterMessage(ActionResultV1.ErrorDetailV1)
 
-ActionResponse = _reflection.GeneratedProtocolMessageType('ActionResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ACTIONRESPONSE,
+ActionResponseV1 = _reflection.GeneratedProtocolMessageType('ActionResponseV1', (_message.Message,), dict(
+  DESCRIPTOR = _ACTIONRESPONSEV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.ActionResponse)
+  # @@protoc_insertion_point(class_scope:soa.ActionResponseV1)
   ))
-_sym_db.RegisterMessage(ActionResponse)
+_sym_db.RegisterMessage(ActionResponseV1)
 
-ServiceRequest = _reflection.GeneratedProtocolMessageType('ServiceRequest', (_message.Message,), dict(
-  DESCRIPTOR = _SERVICEREQUEST,
+ServiceRequestV1 = _reflection.GeneratedProtocolMessageType('ServiceRequestV1', (_message.Message,), dict(
+  DESCRIPTOR = _SERVICEREQUESTV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.ServiceRequest)
+  # @@protoc_insertion_point(class_scope:soa.ServiceRequestV1)
   ))
-_sym_db.RegisterMessage(ServiceRequest)
+_sym_db.RegisterMessage(ServiceRequestV1)
 
-ServiceResponse = _reflection.GeneratedProtocolMessageType('ServiceResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SERVICERESPONSE,
+ServiceResponseV1 = _reflection.GeneratedProtocolMessageType('ServiceResponseV1', (_message.Message,), dict(
+  DESCRIPTOR = _SERVICERESPONSEV1,
   __module__ = 'soa_pb2'
-  # @@protoc_insertion_point(class_scope:soa.ServiceResponse)
+  # @@protoc_insertion_point(class_scope:soa.ServiceResponseV1)
   ))
-_sym_db.RegisterMessage(ServiceResponse)
+_sym_db.RegisterMessage(ServiceResponseV1)
 
 
 # @@protoc_insertion_point(module_scope)
