@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='soa.proto',
   package='soa',
-  serialized_pb=_b('\n\tsoa.proto\x12\x03soa\"?\n\tControlV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\r\n\x05token\x18\x02 \x01(\t\x12\x0f\n\x07service\x18\x03 \x01(\t\"\x93\x01\n\x0bPaginatorV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x11\n\tnext_page\x18\x02 \x01(\r\x12\x15\n\rprevious_page\x18\x03 \x01(\r\x12\r\n\x05\x63ount\x18\x04 \x01(\r\x12\x11\n\tpage_size\x18\x05 \x01(\r\x12\x0f\n\x04page\x18\x06 \x01(\r:\x01\x31\x12\x13\n\x0btotal_pages\x18\x07 \x01(\r\"k\n\x0f\x41\x63tionControlV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\t\x12#\n\tpaginator\x18\x04 \x01(\x0b\x32\x10.soa.PaginatorV1\"x\n\x0f\x41\x63tionRequestV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12%\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x14.soa.ActionControlV1\x12*\n\x06params\x18\x03 \x01(\x0b\x32\x1a.soa.ActionRequestParamsV1\"5\n\x15\x41\x63tionRequestParamsV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"\xda\x01\n\x0e\x41\x63tionResultV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x0f\n\x07success\x18\x02 \x01(\x08\x12\x0e\n\x06\x65rrors\x18\x03 \x03(\t\x12\x38\n\rerror_details\x18\x04 \x03(\x0b\x32!.soa.ActionResultV1.ErrorDetailV1\x1aO\n\rErrorDetailV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\r\n\x05\x65rror\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\x12\x0e\n\x06\x64\x65tail\x18\x04 \x01(\t*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"r\n\x10\x41\x63tionResponseV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12%\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x14.soa.ActionControlV1\x12#\n\x06result\x18\x03 \x01(\x0b\x32\x13.soa.ActionResultV1\"n\n\x10ServiceRequestV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x1f\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x0e.soa.ControlV1\x12%\n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x14.soa.ActionRequestV1\"p\n\x11ServiceResponseV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x1f\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x0e.soa.ControlV1\x12&\n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x15.soa.ActionResponseV1')
+  serialized_pb=_b('\n\tsoa.proto\x12\x03soa\"J\n\tControlV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\r\n\x05token\x18\x02 \x01(\t\x12\x0f\n\x07service\x18\x03 \x01(\t*\t\x08\xe8\x07\x10\x80\x80\x80\x80\x02\"\x9e\x01\n\x0bPaginatorV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x11\n\tnext_page\x18\x02 \x01(\r\x12\x15\n\rprevious_page\x18\x03 \x01(\r\x12\r\n\x05\x63ount\x18\x04 \x01(\r\x12\x11\n\tpage_size\x18\x05 \x01(\r\x12\x0f\n\x04page\x18\x06 \x01(\r:\x01\x31\x12\x13\n\x0btotal_pages\x18\x07 \x01(\r*\t\x08\xe8\x07\x10\x80\x80\x80\x80\x02\"v\n\x0f\x41\x63tionControlV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\t\x12#\n\tpaginator\x18\x04 \x01(\x0b\x32\x10.soa.PaginatorV1*\t\x08\xe8\x07\x10\x80\x80\x80\x80\x02\"\x83\x01\n\x0f\x41\x63tionRequestV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12%\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x14.soa.ActionControlV1\x12*\n\x06params\x18\x03 \x01(\x0b\x32\x1a.soa.ActionRequestParamsV1*\t\x08\xe8\x07\x10\x80\x80\x80\x80\x02\"5\n\x15\x41\x63tionRequestParamsV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"\xda\x01\n\x0e\x41\x63tionResultV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x0f\n\x07success\x18\x02 \x01(\x08\x12\x0e\n\x06\x65rrors\x18\x03 \x03(\t\x12\x38\n\rerror_details\x18\x04 \x03(\x0b\x32!.soa.ActionResultV1.ErrorDetailV1\x1aO\n\rErrorDetailV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\r\n\x05\x65rror\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\x12\x0e\n\x06\x64\x65tail\x18\x04 \x01(\t*\x08\x08\x64\x10\x80\x80\x80\x80\x02\"}\n\x10\x41\x63tionResponseV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12%\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x14.soa.ActionControlV1\x12#\n\x06result\x18\x03 \x01(\x0b\x32\x13.soa.ActionResultV1*\t\x08\xe8\x07\x10\x80\x80\x80\x80\x02\"y\n\x10ServiceRequestV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x1f\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x0e.soa.ControlV1\x12%\n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x14.soa.ActionRequestV1*\t\x08\xe8\x07\x10\x80\x80\x80\x80\x02\"{\n\x11ServiceResponseV1\x12\x12\n\x07version\x18\x01 \x01(\r:\x01\x31\x12\x1f\n\x07\x63ontrol\x18\x02 \x01(\x0b\x32\x0e.soa.ControlV1\x12&\n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x15.soa.ActionResponseV1*\t\x08\xe8\x07\x10\x80\x80\x80\x80\x02')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -60,12 +60,12 @@ _CONTROLV1 = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
+  is_extendable=True,
+  extension_ranges=[(1000, 536870912), ],
   oneofs=[
   ],
   serialized_start=18,
-  serialized_end=81,
+  serialized_end=92,
 )
 
 
@@ -132,12 +132,12 @@ _PAGINATORV1 = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
+  is_extendable=True,
+  extension_ranges=[(1000, 536870912), ],
   oneofs=[
   ],
-  serialized_start=84,
-  serialized_end=231,
+  serialized_start=95,
+  serialized_end=253,
 )
 
 
@@ -183,12 +183,12 @@ _ACTIONCONTROLV1 = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
+  is_extendable=True,
+  extension_ranges=[(1000, 536870912), ],
   oneofs=[
   ],
-  serialized_start=233,
-  serialized_end=340,
+  serialized_start=255,
+  serialized_end=373,
 )
 
 
@@ -227,12 +227,12 @@ _ACTIONREQUESTV1 = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
+  is_extendable=True,
+  extension_ranges=[(1000, 536870912), ],
   oneofs=[
   ],
-  serialized_start=342,
-  serialized_end=462,
+  serialized_start=376,
+  serialized_end=507,
 )
 
 
@@ -261,8 +261,8 @@ _ACTIONREQUESTPARAMSV1 = _descriptor.Descriptor(
   extension_ranges=[(100, 536870912), ],
   oneofs=[
   ],
-  serialized_start=464,
-  serialized_end=517,
+  serialized_start=509,
+  serialized_end=562,
 )
 
 
@@ -312,8 +312,8 @@ _ACTIONRESULTV1_ERRORDETAILV1 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=649,
-  serialized_end=728,
+  serialized_start=694,
+  serialized_end=773,
 )
 
 _ACTIONRESULTV1 = _descriptor.Descriptor(
@@ -362,8 +362,8 @@ _ACTIONRESULTV1 = _descriptor.Descriptor(
   extension_ranges=[(100, 536870912), ],
   oneofs=[
   ],
-  serialized_start=520,
-  serialized_end=738,
+  serialized_start=565,
+  serialized_end=783,
 )
 
 
@@ -402,12 +402,12 @@ _ACTIONRESPONSEV1 = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
+  is_extendable=True,
+  extension_ranges=[(1000, 536870912), ],
   oneofs=[
   ],
-  serialized_start=740,
-  serialized_end=854,
+  serialized_start=785,
+  serialized_end=910,
 )
 
 
@@ -446,12 +446,12 @@ _SERVICEREQUESTV1 = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
+  is_extendable=True,
+  extension_ranges=[(1000, 536870912), ],
   oneofs=[
   ],
-  serialized_start=856,
-  serialized_end=966,
+  serialized_start=912,
+  serialized_end=1033,
 )
 
 
@@ -490,12 +490,12 @@ _SERVICERESPONSEV1 = _descriptor.Descriptor(
   enum_types=[
   ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
+  is_extendable=True,
+  extension_ranges=[(1000, 536870912), ],
   oneofs=[
   ],
-  serialized_start=968,
-  serialized_end=1080,
+  serialized_start=1035,
+  serialized_end=1158,
 )
 
 _ACTIONCONTROLV1.fields_by_name['paginator'].message_type = _PAGINATORV1

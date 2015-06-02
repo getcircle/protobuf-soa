@@ -6,6 +6,8 @@ message ControlV1 {
     optional uint32 version = 1 [default = 1];
     optional string token = 2;
     optional string service = 3;
+
+    extensions 1000 to max;
 }
 
 message PaginatorV1 {
@@ -16,6 +18,8 @@ message PaginatorV1 {
     optional uint32 page_size = 5;
     optional uint32 page = 6 [default = 1];
     optional uint32 total_pages = 7;
+
+    extensions 1000 to max;
 }
 
 message ActionControlV1 {
@@ -23,17 +27,23 @@ message ActionControlV1 {
     optional string service = 2;
     optional string action = 3;
     optional PaginatorV1 paginator = 4;
+
+    // give us room to extend ActionControlV1 message
+    extensions 1000 to max;
 }
 
 message ActionRequestV1 {
     optional uint32 version = 1 [default = 1];
     optional ActionControlV1 control = 2;
     optional ActionRequestParamsV1 params = 3;
+
+    extensions 1000 to max;
 }
 
 message ActionRequestParamsV1 {
     optional uint32 version = 1 [default = 1];
 
+    // XXX bump this to 1000
     // give us room to extend the ActionRequestParams message
     extensions 100 to max;
 }
@@ -51,6 +61,7 @@ message ActionResultV1 {
         optional string detail = 4;
     }
 
+    // XXX bump this to 1000
     // give us room to extend the ActionResult
     extensions 100 to max;
 }
@@ -59,16 +70,22 @@ message ActionResponseV1 {
     optional uint32 version = 1 [default = 1];
     optional ActionControlV1 control = 2;
     optional ActionResultV1 result = 3;
+
+    extensions 1000 to max;
 }
 
 message ServiceRequestV1 {
     optional uint32 version = 1 [default = 1];
     optional ControlV1 control = 2;
     repeated ActionRequestV1 actions = 3;
+
+    extensions 1000 to max;
 }
 
 message ServiceResponseV1 {
     optional uint32 version = 1 [default = 1];
     optional ControlV1 control = 2;
     repeated ActionResponseV1 actions = 3;
+
+    extensions 1000 to max;
 }
