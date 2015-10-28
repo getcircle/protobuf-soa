@@ -1,3 +1,4 @@
+syntax = "proto2";
 package soa;
 
 option java_package = "com.rhlabs.protobufs.soa";
