@@ -9,12 +9,11 @@ from invoke import (
 )
 
 PACKAGE_NAME = 'protobuf-soa'
-VERSION_FILE = 'VERSION.md'
+VERSION_FILE = 'service_protobufs/__init__.py'
 
-# TODO: Bump the python version as well
 VERSION_RE = re.compile(r'^\d+\.\d+\.\d+$')
-CURRENT_VERSION_RE = re.compile(r'VERSION\s*=\s*(.*?)$')
-VERSION_RE_TEMPLATE = "VERSION = %s"
+CURRENT_VERSION_RE = re.compile(r"__version__\s*=\s*['\"](.*?)['\"]")
+VERSION_RE_TEMPLATE = "__version__ = '%s'"
 RELEASE_MESSAGE_TEMPLATE = "Releasing version %s"
 
 
