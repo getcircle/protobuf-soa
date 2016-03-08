@@ -19,6 +19,7 @@ message PaginatorV1 {
     optional uint32 page_size = 5;
     optional uint32 page = 6 [default = 1];
     optional uint32 total_pages = 7;
+    optional bool disabled = 8;
 
     extensions 1000 to max;
 }
